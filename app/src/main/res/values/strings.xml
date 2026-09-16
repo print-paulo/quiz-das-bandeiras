@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Quiz_das-Bandeiras_paulohenrique</string>
+    <string name="header_title">Quiz das Bandeiras</string>
+    <string name="header_icon_description">Icone minimalista de uma bandeira branca</string>
+    <string name="nome_aluno1">Paulo Henrique Nascimento Queiroz</string>
+    <string name="rgm_aluno1">RGM: 45704783</string>
+    <string name="aluno1_descricao">Aluno loiro de olhos castanhos olhando para direção da câmera</string>
+    <string name="aluno2_descricao">Aluno de cabelo escuro olhando para direção da câmera</string>
+    <string name="nome_aluno2">Tácio Luig Correia Queiroz</string>
+    <string name="rgm_aluno2">RGM: 45519994</string>
+    <string name="hint_nome">Digite seu nome...</string>
+    <string name="btn_iniciar_quiz">INICIAR QUIZ</string>
+    <string name="btn_sair">SAIR</string>
+</resources>
