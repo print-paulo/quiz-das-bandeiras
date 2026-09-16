@@ -1,5 +1,6 @@
 package br.edu.unicid.quiz_das_bandeiras_paulohenrique;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,10 +13,11 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class TelaQuiz extends AppCompatActivity {
+
+    public static final String EXTRA_NOME_ALUNO = "NOME_ALUNO";
 
     // Representa uma pergunta: a bandeira, as alternativas e qual delas é a correta
     private static class Pergunta {
@@ -38,6 +40,7 @@ public class TelaQuiz extends AppCompatActivity {
     private RadioGroup radioGroupAlternativas;
     private RadioButton radioAlternativa1, radioAlternativa2, radioAlternativa3, radioAlternativa4;
     private Button btnResponder;
+    private String nomeAluno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +52,8 @@ public class TelaQuiz extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        // Muda as cores das barras de status
-        WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView()).setAppearanceLightStatusBars(false);
+
+        nomeAluno = getIntent().getStringExtra(EXTRA_NOME_ALUNO);
 
         montarPerguntas();
 
@@ -148,6 +151,10 @@ public class TelaQuiz extends AppCompatActivity {
     }
 
     private void finalizarQuiz() {
-        finish(); // Encerra a tela de quiz e volta para a Tela Principal
+        Intent intent = new Intent(TelaQuiz.this, TelaRanking.class);
+        intent.putExtra(TelaRanking.EXTRA_NOME_ALUNO, nomeAluno);
+        intent.putExtra(TelaRanking.EXTRA_PONTUACAO, pontuacao);
+        startActivity(intent);
+        finish(); // Sai da TelaQuiz; voltar não deve reabrir o quiz no meio
     }
 }

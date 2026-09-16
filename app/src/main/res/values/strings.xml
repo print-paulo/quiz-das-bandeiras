@@ -13,4 +13,8 @@
     <string name="btn_sair">SAIR</string>
     <string name="imagem_bandeira_descricao">Bandeira do país</string>
     <string name="btn_responder">RESPONDER</string>
+    <string name="titulo_ranking">Ranking</string>
+    <string name="acertos_label">Acertos:</string>
+    <string name="btn_responder_novamente">RESPONDER NOVAMENTE</string>
+    <string name="btn_tela_principal">TELA PRINCIPAL</string>
 </resources>
