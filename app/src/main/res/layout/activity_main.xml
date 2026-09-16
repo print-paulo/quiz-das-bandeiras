@@ -12,7 +12,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/crdHeader"
@@ -20,6 +24,8 @@
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/black"
             app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
